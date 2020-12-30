@@ -35,25 +35,54 @@ A ideia da PEP8 é que possamos escrever códigos Python de forma Pythónica.
         linha em branco.
 
 [5] - Imports:
-        - devem ser sempre feitos em linhas separadas;
-        -
+        # devem ser sempre feitos em linhas separadas;
+
+            Ex: # Import Errado
+
+                    import sys, os
+
+                # Import Certo
+
+                    import sys
+                    import os
+
+        # Não há problemas em utilizar:
+
+            from types import StringType, ListType
+
+        # Caso tenha muitos imports do mesmo pacote, recomenda-se fazer:
+
+            from types import{
+                StringType,
+                ListType,
+                SetType,
+                OutroType
+            }
+
+        # Imports devem ser colocados no topo do arquivo, logo depois de
+        quaisquer comentátios ou docstrings e antes de constantes ou
+        variáveis globais
+
+[6] - Espaços em expressões e instruções;
+
+    # Errado:
+
+        - funcao(_algo[_1_], {_outro:_2_}) -> ( _ = espaço)
+        - algo_(1)
+        - dict_['chave'] = list_[indice]
+        - x______________= 1
+          y______________= 2
+          variavel_longa = 3
+
+    # Correto:
+
+        - funcao(algo[1], {outro: 2})
+        - algo(1)
+        - dict['chave'] = list[indice]
+        _ x = 1
+          y = 2
+          variavel_longa = 3
+
+[7] - Termine sempre uma instrução com uma nova linha
 """
-
-
-class Calculadora:
-    pass
-
-
-class CalculadoraCientifica:
-    pass
-
-
-def soma():
-    pass
-
-
-def soma_dois():
-    pass
-
-if 'a' in 'banana':
-    print('tem')
+import this
