@@ -27,7 +27,7 @@ Dir -> Apresenta todos os atributos/propriedades e funções/métodos disponíve
 Help -> Apresenta a documentação como utilizar os atributos/propriedades e
         funções/métodos disponíveis para determinado tipo de dado ou variável.
 
-    -> help(tipo de dado/variável.propriedadde)
+    -> \help(tipo de dado/variável.propriedadde)
 
         help("OLA".lower)
             Help on built-in function lower:
