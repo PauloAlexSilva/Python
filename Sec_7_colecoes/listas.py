@@ -4,6 +4,8 @@ Listas
 Listas em Python funcional como vetores/matrizes (arrays) em outras linguagens, com a diferença
 de serem DINÂMICAS e também de podermos colocar QUALQUER tipo de dado.
 
+-> Listas são mutáveis. Ou seja, elas podem mudar constantemente.
+
 Liguagens C/Java: Arrays
 
     - Possuem tamanho e tipo de dado fixo:
