@@ -132,18 +132,17 @@ informada
 # a mesma
 # CONCLUSÃO 2: Em dicionários, NÃO podemos ter chaves repetidas.
 
-"""
 
 # Remover dados de um dicionário
 
-receita = {'jan': 100, 'fev': 120, 'mar': 300}
-print(receita)
+    receita = {'jan': 100, 'fev': 120, 'mar': 300}
+    print(receita)
 
 # Forma 1 - Mais comum
 
-retorno = receita.pop('mar')
-print(retorno)
-print(receita)
+    retorno = receita.pop('mar')
+    print(retorno)
+    print(receita)
 
 # OBS 1: Aquie é preciso SEMPRE informar a chave, e caso não encontre o elemento,
 # um KeyError é retornado
@@ -152,9 +151,54 @@ print(receita)
 
 # Forma 2
 
-del receita['fev']
-print(receita)
+    del receita['fev']
+    print(receita)
 
 # del receita['fev']
 # Se a chave não existir será gerado um KeyError
 # OBS: Neste caso o valor removido não é retornado.
+
+"""
+
+# Imagine que tem um comércio eletrónico, onde temos um carrinho de compras no qual
+# adicionamos produtos.
+"""
+Carrinho de Compras:
+    Produto 1:
+        - nome;
+        - quantidade;
+        - preço.
+    Produto 2:
+        - nome;
+        - quantidade;
+        - preço.
+"""
+
+# 1 - Poderíamos utilizar uma Lista para isso? Sim
+
+carrinho = []
+
+produto_1 = ['Playstation 4', 1, 300.00]
+produto_2 = ['Go of war 4', 1, 50.00]
+
+carrinho.append(produto_1)
+carrinho.append(produto_2)
+print(carrinho)
+
+# Teríamos que saber qual é o índice de cada informação no produto.
+
+# 2 - Poderíamos utilizar uma tupla para isso? Sim
+
+produto_1 = ('Playstation 4', 1, 300.00)
+produto_2 = ('God of War 4', 1, 50.00)
+
+carrinho = (produto_1, produto_2)
+print(carrinho)
+
+# Teríamos que saber qual é o índice de cada informação no produto.
+
+# 3 - Poderiamos utilizar um dicionário para isso? Sim
+
+carrinho = []
+
+produto_1 = {'nome': 'Playstation 4', 'quantidade': 1, 'preco': 230.00}
