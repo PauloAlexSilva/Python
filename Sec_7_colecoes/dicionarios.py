@@ -82,4 +82,15 @@ informada
         russia = paises['ru']
 """
 
-paises = {'pt': 'Portugal', 'br': 'Brasil', 'usa': 'Estados Unidos'}
+# Podemos utilizar qualquer tipo de dado (int, float, string, boolean), inclusive lista,
+# tupla dicionário, como chaves de dicionários.
+
+localidades = {
+    (35.6895, 39.6917): 'Escritórios em Tókio',
+    (40.7128, 74.0060): 'Escritórios em Nova York',
+    (35.7749, 122.4194): 'Escritórios em São Paulo',
+}
+
+print(localidades)
+print(type(localidades))
+
