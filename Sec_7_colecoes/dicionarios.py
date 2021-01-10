@@ -80,17 +80,81 @@ informada
 
     if 'ru' in paises:
         russia = paises['ru']
-"""
+
 
 # Podemos utilizar qualquer tipo de dado (int, float, string, boolean), inclusive lista,
 # tupla dicionário, como chaves de dicionários.
 
-localidades = {
-    (35.6895, 39.6917): 'Escritórios em Tókio',
-    (40.7128, 74.0060): 'Escritórios em Nova York',
-    (35.7749, 122.4194): 'Escritórios em São Paulo',
-}
+# Tuplas por exemplo são bastante interessantes de serem utilizadas como chave de dicionários,
+# pois as mesmas são imutáveis.
 
-print(localidades)
-print(type(localidades))
+    localidades = {
+        (35.6895, 39.6917): 'Escritórios em Tókio',
+        (40.7128, 74.0060): 'Escritórios em Nova York',
+        (35.7749, 122.4194): 'Escritórios em São Paulo'
+    }
 
+    print(localidades)
+    print(type(localidades))
+
+
+# Adicionar elementos em um dicionário
+
+    receita = {'jan': 100, 'fev': 120, 'mar': 300}
+
+    print(receita)
+    print(type(receita))
+
+# Forma 1 - Mais comum
+
+    receita['abr'] = 350
+    print(receita)
+
+# Forma 2
+
+    novo_dado = {'mai': 500}
+    receita.update(novo_dado)  # receita.update({'mai': 500})
+    print(receita)
+
+# Actualizar dados num dicionário
+
+# Forma 1
+
+    receita['mai'] = 550
+    print(receita)
+
+# Forma 2
+
+    receita.update({'mai': 600})
+    print(receita)
+
+# CONCLUSÃO 1: A forma de adicionar novos elementos ou atualizar dados em um dicionário é
+# a mesma
+# CONCLUSÃO 2: Em dicionários, NÃO podemos ter chaves repetidas.
+
+"""
+
+# Remover dados de um dicionário
+
+receita = {'jan': 100, 'fev': 120, 'mar': 300}
+print(receita)
+
+# Forma 1 - Mais comum
+
+retorno = receita.pop('mar')
+print(retorno)
+print(receita)
+
+# OBS 1: Aquie é preciso SEMPRE informar a chave, e caso não encontre o elemento,
+# um KeyError é retornado
+
+# OBS 2: Ao remover um objecto o valor deste objecto é sempre retornado
+
+# Forma 2
+
+del receita['fev']
+print(receita)
+
+# del receita['fev']
+# Se a chave não existir será gerado um KeyError
+# OBS: Neste caso o valor removido não é retornado.
