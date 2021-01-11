@@ -172,33 +172,100 @@ Carrinho de Compras:
         - nome;
         - quantidade;
         - preço.
-"""
+
 
 # 1 - Poderíamos utilizar uma Lista para isso? Sim
 
-carrinho = []
-
-produto_1 = ['Playstation 4', 1, 300.00]
-produto_2 = ['Go of war 4', 1, 50.00]
-
-carrinho.append(produto_1)
-carrinho.append(produto_2)
-print(carrinho)
+    carrinho = []
+    
+    produto_1 = ['Playstation 4', 1, 300.00]
+    produto_2 = ['Go of war 4', 1, 50.00]
+    
+    carrinho.append(produto_1)
+    carrinho.append(produto_2)
+    print(carrinho)
 
 # Teríamos que saber qual é o índice de cada informação no produto.
 
 # 2 - Poderíamos utilizar uma tupla para isso? Sim
 
-produto_1 = ('Playstation 4', 1, 300.00)
-produto_2 = ('God of War 4', 1, 50.00)
-
-carrinho = (produto_1, produto_2)
-print(carrinho)
+    produto_1 = ('Playstation 4', 1, 300.00)
+    produto_2 = ('God of War 4', 1, 50.00)
+    
+    carrinho = (produto_1, produto_2)
+    print(carrinho)
 
 # Teríamos que saber qual é o índice de cada informação no produto.
 
 # 3 - Poderiamos utilizar um dicionário para isso? Sim
 
-carrinho = []
+    carrinho = []
+    
+    produto_1 = {'nome': 'Playstation 4', 'quantidade': 1, 'preco': 300.00}
+    produto_2 = {'nome': 'God of War 4', 'quantidade': 1, 'preco': 50.00}
+    
+    carrinho.append(produto_1)
+    carrinho.append(produto_2)
+    
+    print(carrinho)
 
-produto_1 = {'nome': 'Playstation 4', 'quantidade': 1, 'preco': 230.00}
+# Desta forma facilmente adicionamos ou removemos produtos  no carrinho e em cada produto
+# podemos ter a certeza sobre cada informação.
+
+
+# Métodos de dicionários
+
+    dicionario = dict(a=1, b=2, c=3)
+    
+    print(dicionario)
+    print(type(dicionario))
+
+# Limparo o dicionário (Zerar dados)
+
+    dicionario.clear()
+    print(dicionario)
+    
+# Copiando um dicionário para outro
+
+# Forma 1 (Deep Copy)
+    novo = dicionario.copy()
+    print(novo)
+    
+    novo['d'] = 4
+    
+    print(dicionario)
+    print(novo)
+    
+# Forma 2 (Shallow Copy)
+# ambos são alterados
+
+    novo = dicionario
+    print(novo)
+    
+    novo['d'] = 4
+    
+    print(dicionario)
+    print(novo)
+
+"""
+
+# Forma não usual de criação de dicionários
+
+outro = {}.fromkeys('a', 'b')
+
+print(outro)
+print(type(outro))
+
+user = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconhecido')
+print(user)
+print(type(outro))
+
+# O método fromkeys recebe dois parâmetros: um interável e um valor.
+# Ele vai gerar para cada valor do iterável uma chave e irá atribuir a
+# esta chave o valor informado
+
+veja = {}.fromkeys('teste', 'valor')
+print(veja)
+
+veja = {}.fromkeys(range(1, 11), 'novo')
+print(veja)
