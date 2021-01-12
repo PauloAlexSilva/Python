@@ -1,2 +1,4 @@
-# Python
-  Some Python projects.
+# Python Course
+
+Udemy Online Python Course
+
