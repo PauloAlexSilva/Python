@@ -50,11 +50,17 @@ Diferença entre Conjuntos (Sets) e Mapas(Dicionários) em Python:
 
 # Importante lembrar que, além de não termos valores duplicados, não temos ordem
 
-lista = [99, 2, 34, 23, 12, 1, 44, 5]
+dados = '99, 2, 34, 23, 2, 12, 1, 44, 5, 34'
+
+lista = list(dados)
 print(f'Lista: {lista}')
 
-tupla = ()
-s = {99, 2, 34, 23, 12, 1, 44, 5}
+tupla = tuple(dados)
+print(f'Tupla: {tupla}')
 
-print()
+dicionario = (dados, 'dict')
+print(f'Dicionario: {dicionario}')
+
+conjunto = set(dados)
+print(f'Conjunto: {conjunto}')
 
