@@ -22,21 +22,39 @@ Diferença entre Conjuntos (Sets) e Mapas(Dicionários) em Python:
     - Um dicionário tem chave/valor;
     - Um conjunto tem apenas valor;
 
-"""
 
 # Definindo um conjunto
 
 # Forma 1
 
-s = set({1, 2, 3, 4, 5, 5, 6, 7, 2, 3})  # Temos valores repetidos
-print(s)
-print(type(s))
+    s = set({1, 2, 3, 4, 5, 5, 6, 7, 2, 3})  # Temos valores repetidos
+    print(s)
+    print(type(s))
 
 # OBS: Ao criar um conjunto, caso seja adicionado um valor já existente, o
 # mesmo será ignorado sem gerar erro e não fará parte do conjunto
 
 # Forma 2 - Mais comum
 
-s = {1, 2, 3, 4, 5, 5}
-print(s)
-print(type(s))
+    s = {1, 2, 3, 4, 5, 5}
+    print(s)
+    print(type(s))
+
+# Podemos verificar se determinado elemento está contido no conjunto
+
+    if 3 in s:
+        print('Tem o 3!')
+    else:
+        print('Não tem o 3!')
+"""
+
+# Importante lembrar que, além de não termos valores duplicados, não temos ordem
+
+lista = [99, 2, 34, 23, 12, 1, 44, 5]
+print(f'Lista: {lista}')
+
+tupla = ()
+s = {99, 2, 34, 23, 12, 1, 44, 5}
+
+print()
+
