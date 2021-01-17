@@ -46,18 +46,26 @@ Diferença entre Conjuntos (Sets) e Mapas(Dicionários) em Python:
         print('Tem o 3!')
     else:
         print('Não tem o 3!')
-"""
+
 
 # Importante lembrar que, além de não termos valores duplicados, não temos ordem
 
-lista = [99, 2, 34, 23, 2, 12, 1, 44, 5, 34]
-print(f'Lista: {lista}')
+# Listas aceitam valores duplicados, então temos 10 elementos.
+    lista = [99, 2, 34, 23, 2, 12, 1, 44, 5, 34]
+    print(f'Lista: {lista} com {len(lista)} elementos.')
 
-tupla = (99, 2, 34, 23, 2, 12, 1, 44, 5, 34)
-print(f'Tupla: {tupla}')
+# Tuplas aceitam valroes duplicados, então temos 10 elementos.
+    tupla = (99, 2, 34, 23, 2, 12, 1, 44, 5, 34)
+    print(f'Tupla: {tupla} com {len(tupla)} elementos.')
 
-dicionario = {}.fromkeys([99, 2, 34, 23, 2, 12, 1, 44, 5, 34], 'dict')
-print(f'Dicionario: {dicionario}')
+# Dicionários não aceitam chaves duplicadas, então temos 8 elementos
+    dicionario = {}.fromkeys([99, 2, 34, 23, 2, 12, 1, 44, 5, 34], 'dict')
+    print(f'Dicionario: {dicionario} com {len(dicionario)} elementos.')
 
-conjunto = {99, 2, 34, 23, 2, 12, 1, 44, 5, 34}
-print(f'Conjunto: {conjunto}')
+# Conjuntos não acaitam valores duplicados, então temos 8 elementos
+    conjunto = {99, 2, 34, 23, 2, 12, 1, 44, 5, 34}
+    print(f'Conjunto: {conjunto} com {len(conjunto)} elementos.')
+
+
+"""
+
