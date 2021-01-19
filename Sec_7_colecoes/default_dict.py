@@ -1,6 +1,7 @@
 """
 Módulo Collections - Default Dict
 
+https://docs.python.org/3/library/collections.html#collections.defaultdict
 
 # Recapitulando dicionários
 
@@ -26,3 +27,11 @@ devolver valores.
 from collections import defaultdict
 
 dicionario = defaultdict(lambda: 0)
+
+dicionario['curso'] = 'Programação em Python'
+
+print(dicionario)
+
+print(dicionario['outro'])  # KeyError no dicionário comum, mas aqui não
+
+print(dicionario)
