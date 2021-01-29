@@ -85,7 +85,34 @@ OBS: Sobre a palavra reservada retrun
     print(type(outra_funcao()))
 
 
+# Vamos criar uma função para jogar a moeda
+
+from random import random
+
+
+def cara_coroa():
+    # Gera um número pseudo-randômico entre 0 e 1
+    # valor = random()
+    if random() > 0.5:
+        return 'Cara'
+    return 'Coroa'
+
+
+print(cara_coroa())
+
+
 """
 
 
+# Erros comuns na utilização do retorno, que na verdade não é erro, mas sim codificação
+# desnecessária.
 
+def impar():
+    numero = 2
+    if numero % 2 != 0:
+        return True
+    # else: apenas tendo um else não vale a pena colocar o else mas sim o return no fim
+    return False
+
+
+print(impar())
