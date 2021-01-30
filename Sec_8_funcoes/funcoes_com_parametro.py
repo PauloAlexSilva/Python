@@ -43,10 +43,6 @@ def cantar_parabens(aniversariante):
 cantar_parabens('Paulo')
 
 
-
-"""
-
-
 # Funções podem ter n parâmetros de entrada. Ou seja, podemos receber como entrada
 # numa função quantos parâmetros forem necessários. Eles são separados por vírgula
 
@@ -73,3 +69,60 @@ print(multiplica(2, 8))
 
 print(outra(3, 2, 'Geek '))
 print(outra(5, 4, 'Python '))
+
+# OBS: Se informarmos um número errado de parâmetros ou argumentos, teremos TypeError
+
+# print(soma(2, 3, 4))  # TypeError - Passando argumentos a mais
+# print(soma(4))  # TypeError - Passando argumentos a menos
+
+
+# Nomeando parâmentros
+
+def nome_compelto(nome, sobrenome):
+    return f'Seu nome compelto é {nome} {sobrenome}'
+
+
+print(nome_compelto('Paulo', 'Silva'))
+
+# A diferença entre Parâmetros e Argumentos
+
+# Parâmetros são variáveis declaradas na definição de uma função;
+# Argumentos são dados passados durante a execução de uma função;
+
+# A ordem dos parâmetros improta!
+
+nome = 'Felicity'
+sobrenome = 'Jones'
+
+print(nome_compelto(sobrenome, nome))
+
+# Argumentos nomeados (KeyWord Arguments)
+
+# Caso utilizemos nomes dos parâmentros nos argumentos para informá-los,
+# podemos utilizar qualquer ordem.
+
+print(nome_compelto(nome='Angelina', sobrenome='Jolie'))
+print(nome_compelto(nome=nome, sobrenome=sobrenome))
+print(nome_compelto(sobrenome='Marques', nome='Marcia'))
+
+
+
+"""
+
+
+# Erro comum na utilização do return
+
+
+def soma_impares(numeros):
+    total = 0
+    for num in numeros:
+        if num % 2 != 0:
+            total = total + num
+    return total
+
+
+lista = [1, 2, 3, 4, 5, 6, 7]
+print(soma_impares(lista))
+
+tupla = (1, 2, 3, 4, 5, 6, 7)
+print(soma_impares(tupla))
