@@ -58,9 +58,6 @@ print(soma(4))  # TypeError
 print(soma())  # TypeError
 
 
-"""
-
-
 # Exemplo mais complexo
 
 def mostra_informacao(nome='Paulo', instrutor=False):
@@ -73,4 +70,18 @@ def mostra_informacao(nome='Paulo', instrutor=False):
 
 print(mostra_informacao())
 print(mostra_informacao(instrutor=True))
+print(mostra_informacao(True))
 print(mostra_informacao('Carlos'))
+print(mostra_informacao(nome='Carlos'))
+
+
+# Porque utilizar parâmetros com valor default?
+
+- Permite que sejamos mais flexiveis nas funções;
+- Evita erros com parâmetros incorretos;
+- Permite trabalhar com exemplos mais legíveis de código.
+
+
+"""
+
+# Quais tipos de dadaos
