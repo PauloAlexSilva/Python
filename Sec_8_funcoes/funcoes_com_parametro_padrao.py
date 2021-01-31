@@ -168,6 +168,24 @@ print(incrementa())
 
 """
 
+
 # Podemos ter funções que são declaradas dentro de funções e também tem uma forma especial de
 # escopo de variável
 
+
+def fora():
+    contador = 0
+
+    def dentro():
+        nonlocal contador  # não é uma variável local
+        contador = contador + 1
+        return contador
+
+    return dentro()
+
+
+print(fora())
+print(fora())
+print(fora())
+
+print(dentro())  # NameError
