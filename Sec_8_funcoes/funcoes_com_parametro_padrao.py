@@ -82,6 +82,87 @@ print(mostra_informacao(nome='Carlos'))
 - Permite trabalhar com exemplos mais legíveis de código.
 
 
+# Quais tipos de dados podemos utilizar como valores default para parâmetros?
+
+- Qualquer tipo de dado:
+    - Números, strings, floats, booleanos, listas, tuplas, dicionários, funções, etc.
+
+
+# Exemplos
+
+def soma(num1, num2):
+    return num1 + num2
+
+
+def mat(num1, num2, fun=soma):
+    return fun(num1, num2)
+
+
+def subtracao(num1, num2):
+    return num1 - num2
+
+
+print(mat(2, 3))
+print(mat(2, 2, subtracao))
+
+
+# Escopo - Evitar probelmas e confusões
+
+# Variáveis Globais
+# Váriáveis Locais
+
+instrutor = 'Paulo'  # Variável global
+
+
+def hello():
+    instrutor = 'Python'  # Variável local
+    return f'Hello {instrutor}!'
+
+
+print(hello())
+print(instrutor)
+
+# OBS: Se tivermos uma variável local com o mesmo nome de uma variável global, a local
+# terá preferência
+
+
+def hello():
+    prof = 'Paulo'  # variável local
+    return f'Hello {prof}'
+
+
+print(hello())
+print(prof)  # NameError
+
+
+# ATENÇÃO com variáveis globais (Se podermos evitar, evite)
+
+total = 0
+
+
+def incrementa():
+    total = total + 1  # UnboundLocalError ( A variável local
+    return total       # está sendo utilizada para processamento sem ter sido inicializada)
+
+
+print(incrementa())
+
+
 """
 
-# Quais tipos de dadaos
+# ATENÇÃO com variáveis globais (Se podermos evitar, evite)
+
+total = 0
+
+
+def incrementa():
+    global total  # Avisando que queremos utilizar a variável global
+
+    total = total + 1  # UnboundLocalError ( A variável local
+    return total  # está sendo utilizada para processamento sem ter sido inicializada)
+
+
+print(incrementa())
+print(incrementa())
+print(incrementa())
+print(incrementa())
