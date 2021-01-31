@@ -148,8 +148,6 @@ def incrementa():
 print(incrementa())
 
 
-"""
-
 # ATENÇÃO com variáveis globais (Se podermos evitar, evite)
 
 total = 0
@@ -166,3 +164,10 @@ print(incrementa())
 print(incrementa())
 print(incrementa())
 print(incrementa())
+
+
+"""
+
+# Podemos ter funções que são declaradas dentro de funções e também tem uma forma especial de
+# escopo de variável
+
