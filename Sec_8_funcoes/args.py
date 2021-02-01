@@ -15,3 +15,9 @@ O parâmetro *args utilizado em uma função, coloca os valores extras informado
 em uma tupla. Não esquecer que as tuplas são imutá
 
 """
+
+
+# Exemplos
+
+def soma(num1, num2, num3):
+    return num1 + num2 + num3
