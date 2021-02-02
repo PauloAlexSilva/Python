@@ -14,8 +14,6 @@ Mas o que é o *args?
 O parâmetro *args utilizado em uma função, coloca os valores extras informados como entrada
 em uma tupla. Não esquecer que as tuplas são imutá
 
-"""
-
 
 # Exemplos
 
@@ -24,3 +22,28 @@ def soma(num1, num2, num3):
 
 
 print(soma(1, 2, 3))
+
+# print(soma(1, 2))  # TypeError
+# print(soma(1, 2, 3, 4))  # TypeError
+
+"""
+
+# Etendendo o args
+
+"""def soma(*args):
+    total = 0
+    for numero in args:
+        total = total + numero
+    return total"""
+
+
+def soma(*args):
+    return sum(args)
+
+
+print(soma())
+print(soma(1))
+print(soma(1, 2, 3))
+print(soma(1, 2, 3, 4))
+
+print(soma(23.4, 12, 5))
