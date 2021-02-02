@@ -39,6 +39,15 @@ print(cumprimento_especial(geek='Oi'))
 print(cumprimento_especial(geek='especial'))
 
 
+# Nas nossas funções, podemos ter (Nesta ordem):
+
+- Parâmetros obrigatórios
+- *args
+- Parâmetros default (não obrigatórios)
+- **kwargs
+
+
+
 """
 
 
