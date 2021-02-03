@@ -45,5 +45,15 @@ for lista in listas:
 
 # Gerar um tabuleiro/matrix 3 x 3
 
+tabuleiro = [[numero for numero in range(1, 4)] for valor in range(1, 4)]
+print(tabuleiro)
 
+# Gerando jogadas para o jogo do galo
+
+velha = [['X' if numero % 2 == 0 else 'O' for numero in range(1, 4)] for valor in range(1, 4)]
+print(velha)
+
+# Gerando valor iniciais
+
+print([['*' for i in range(1, 4)] for j in range(1, 4)])
 
