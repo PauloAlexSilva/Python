@@ -33,8 +33,6 @@ print(nome_compelto(' paulo', ' SILVA '))
 print(nome_compelto('  MARIA ', ' albertina  '))
 
 
-"""
-
 # Em funções Python podemos ter nenhuma ou várias entradas. Em Lambdas também
 
 hello = lambda: 'Hello World!'
@@ -51,3 +49,50 @@ print(hello())
 print(uma(6))
 print(duas(5, 7))
 print(tres(3, 6, 9))
+
+# OBS: Se passarmos mais argumentos do que parâmetros esperados teremos TypeError
+
+
+# Exemplo
+
+autores = ['Paulo Silva', 'Maria Albertina', 'Luis Marques Nunes', 'Carlos Nunes',
+           'Ana S. Leitão', 'Inês Garcia', 'Claudia Sofia', 'I. L. Antunes',
+           'Américo Silva']
+
+print(autores)
+# ['Paulo Silva', 'Maria Albertina', 'Luis Marques Nunes', 'Carlos Nunes',
+# 'Ana S. Leitão', 'Inês Garcia', 'Claudia Sofia', 'I. L. Antunes', 'Américo Silva']
+
+
+# Ordenar pelo sobrenome
+
+autores.sort(key=lambda sobrenome: sobrenome.split(' ')[-1].lower())
+
+print(autores)
+
+# ['Maria Albertina', 'I. L. Antunes', 'Inês Garcia', 'Ana S. Leitão',
+# 'Luis Marques Nunes', 'Carlos Nunes', 'Paulo Silva', 'Américo Silva', 'Claudia Sofia']
+
+
+"""
+
+
+# Função Quadrática
+# f(x) = a * x ** 2 + b * x + c
+
+# Definindo a função
+
+def geradora_funcao_quadratica(a, b, c):
+    """
+    Retorna a função f(x) = a * x ** 2 + b * x + c
+    """
+    return lambda x: a * x ** 2 + b * x + c
+
+
+teste = geradora_funcao_quadratica(2, 3, -5)
+
+print(teste(0))
+print(teste(1))
+print(teste(2))
+
+print(geradora_funcao_quadratica(3, 0, 1)(2))
