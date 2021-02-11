@@ -101,6 +101,9 @@ a)
     print('Paulo')  # IndentationError: expected an indented block
 
 
+OBS: Exceptions e Erros são sinónimos na programação
+
+OBS: Importante ler e prestrar atenção na saída de erro.
 """
 
 
