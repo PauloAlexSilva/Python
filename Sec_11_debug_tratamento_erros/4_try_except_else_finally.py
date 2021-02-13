@@ -22,5 +22,7 @@ else:
 # Finally
 
 try:
-    num = int(input())
-
+    num = int(input('Digite um número: '))
+except ValueError:
+    print('Valor inválido!')
+print('Depois do bloco try/except')
