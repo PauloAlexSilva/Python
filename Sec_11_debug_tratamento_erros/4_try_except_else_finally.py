@@ -33,10 +33,7 @@ finally:
 # O finally, geralmente, é utilizado para fechar ou desalocar recursos.
 
 
-"""
-
-
-# Exemplo mais complexo
+# Exemplo mais complexo - Errado
 
 def dividr(a, b):
     return a / b
@@ -53,3 +50,57 @@ try:
     print(dividr(num1, num2))
 except NameError:
     print('Valor incorreto!')
+
+# Exemplo complexo - Correto
+# OBS: O programador é responsável pelas entradas das suas funções. Então é necessário tratar
+
+def dividir(a, b):
+    try:
+        return int(a) / int(b)
+    except ValueError:
+        return 'Valor incorreto!'
+    except ZeroDivisionError:
+        return 'Não é possível dividir por 0!'
+
+
+num1 = input('Introduza o primeiro número: ')
+num2 = input('Introduza o segundo número: ')
+
+print(dividir(num1, num2))
+
+
+# Exemplo complexo - Genérico
+
+# OBS: O programador é responsável pelas entradas das suas funções. Então é necessário tratar
+
+# Tratamento de erros de forma genérica
+def dividir(a, b):
+    try:
+        return int(a) / int(b)
+    except:
+        return 'Ocorreu um erro!'
+
+
+num1 = input('Introduza o primeiro número: ')
+num2 = input('Introduza o segundo número: ')
+
+print(dividir(num1, num2))
+"""
+
+
+# Exemplo complexo - Semi-Genérico
+
+# OBS: O programador é responsável pelas entradas das suas funções. Então é necessário tratar
+
+# Tratamento de erros de forma genérica
+def dividir(a, b):
+    try:
+        return int(a) / int(b)
+    except (ValueError, ZeroDivisionError) as err:
+        return f'Ocorreu um erro: {err}!'
+
+
+num1 = input('Introduza o primeiro número: ')
+num2 = input('Introduza o segundo número: ')
+
+print(dividir(num1, num2))
