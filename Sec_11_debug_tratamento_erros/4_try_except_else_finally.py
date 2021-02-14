@@ -43,6 +43,13 @@ def dividr(a, b):
 
 
 num1 = int(input('Informe o primeiro numero: '))
-num2 = int(input('Informe o segundo numero: '))
 
-print(dividr(num1, num2))
+try:
+    num2 = int(input('Informe o segundo numero: '))
+except ValueError:
+    print('O valor precisa de ser numérico!')
+
+try:
+    print(dividr(num1, num2))
+except NameError:
+    print('Valor incorreto!')
