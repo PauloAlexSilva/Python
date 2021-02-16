@@ -61,15 +61,14 @@ print(list(map(lambda r: math.pi * (r ** 2), raios)))
 
 # Exemplo
 
-cidade = [('Lisboa', 29), ('Berlin', 15), ('Los Angeles', 26), ('Tokio', 27), ('Londres', 28)]
+cidades = [('Lisboa', 29), ('Berlin', 15), ('Los Angeles', 26), ('Tokio', 27), ('Londres', 28)]
 
-print(cidade)
+print(cidades)
 
 # f = 9/5 * c + 32
 
 # Lamda
 
-c_para_f = lambda dado: (dado[0], (9/5) * dado[1] + 32)
+c_para_f = lambda dado: (dado[0], (9 / 5) * dado[1] + 32)
 
-print(list(map(c_para_f, cidade)))
-
+print(list(map(c_para_f, cidades)))
