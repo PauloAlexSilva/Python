@@ -30,7 +30,10 @@ print(Fore.BLUE + 'Paulo Silva')
 
 """
 
+<<<<<<< HEAD
 import pydf
 pdf = pydf.generate_pdf('<h1>this is html</h1>')
 with open('test_doc.pdf', 'wb') as f:
     f.write(pdf)
+=======
+>>>>>>> ff6744efb1cef61f6dc8bb9cfd578725714bd85b
