@@ -32,13 +32,8 @@ print(teste_4.funcao_4())
 """
 
 from teste.teste_1 import funcao_1
-
 from teste.teste_secundario.teste_4 import funcao_4
 
 print(funcao_1(2, 2))
 
 print(funcao_4())
-
-"""
-teste gj
-"""
