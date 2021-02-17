@@ -38,3 +38,7 @@ from teste.teste_secundario.teste_4 import funcao_4
 print(funcao_1(2, 2))
 
 print(funcao_4())
+
+"""
+teste gj
+"""
