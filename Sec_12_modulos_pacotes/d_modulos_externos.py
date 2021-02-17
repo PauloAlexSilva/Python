@@ -14,7 +14,7 @@ pip install nome_do_modulo
 
 #Instalando o pacote colorama
 
-pip install coloroma
+pip install colorama
 
 # Utilizando o pacote instalado
 
@@ -29,7 +29,7 @@ print(Fore.BLUE + 'Paulo Silva')
 
 
 """
-
+from colorama import init, Fore
 import pydf
 pdf = pydf.generate_pdf('<h1>Programação em Python do básico ao avançado</h1>')
 with open('test_doc.pdf', 'wb') as f:
