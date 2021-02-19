@@ -1,3 +1,3 @@
 A demanda por programadores Python nunca esteve tão alta, afinal,
-Python é uma das linguagens mais utilizadas no mundo e requisito para
-se trabalhar com Ciência de Dados e Inteligência Artificial.
+Python é uma das linguagens mais utilizadas no mundo e requisito
+para se trabalhar com Ciência de Dados e Inteligência Artificial.
