@@ -19,3 +19,7 @@ print(os.getcwd())
 os.chdir('..')
 
 print(os.getcwd())
+
+# Podemos checar se um diretório é absoluto ou relativo
+
+print(os.path.isabs('/home/ubuntu'))
