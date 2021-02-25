@@ -27,10 +27,40 @@ open('arquivo_teste_2.txt', 'a').close()
 with open('arquivo_teste_3.txt', 'w') as arquivo:
     pass  # Não faz nada
 
+
+# Criar arquivos
+
+# os.mknod('arquivo.teste_4.txt')
+
+os.mknod('teste.mknod.txt')
+
+# OBS: Se estiver a usar um Mac OS pode gerar um erro de PermissionError
+# OBS: Criando um arquivo via mknod() se o arquivo já exisitr teremos o erro FileExistsError
+
+
+# Criar Diretórios
+
+# Path Relativo
+
+os.mkdir('Templates')
+
+# OBS: A função mkdir cria um diretório se este não exisitr. Caso exista, teremos FileExistsError
+
+# Path Absoluto
+
+os.mkdir('/home/ubuntu/template')
+
+# OBS: Sen não tivermos permissão para criar o directório teremos um PermissionError
+
+
+
 """
 
 import os
 
-# Criar arquivos
+
+
+
+
 
 
