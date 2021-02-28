@@ -23,8 +23,42 @@ ______________________________________________________________________________
 ------------------------------------------------------------------------------
 
 
+# Exemplo Função Geradora (Generator Function)
+
+def conta_ate(valor_maximo):
+    contador = 1
+    while contador <= valor_maximo:
+        yield contador
+        contador = contador + 1
+
+
+# OBS: Uma Generator Function não é um Generator. Ela gera um generator.
+
+gen = conta_ate(5)
+# print(gen)
+
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+
 """
 
-# Exemplo de Generator Function
+
+# Exemplo Função Geradora (Generator Function)
+
+def conta_ate(valor_maximo):
+    contador = 1
+    while contador <= valor_maximo:
+        yield contador
+        contador = contador + 1
 
 
+# OBS: Uma Generator Function não é um Generator. Ela gera um generator.
+
+gen = conta_ate(10)
+
+for num in gen:
+    print(num)
