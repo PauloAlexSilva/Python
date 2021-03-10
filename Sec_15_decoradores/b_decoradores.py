@@ -18,8 +18,6 @@ O que são decorators?
 /  /---------------------------------/  /
 /----------------------------------------
 
-"""
-
 
 # Decorators como funções (Sintaxe não recomendada / Sem Açúcar Sintático)
 
@@ -36,8 +34,45 @@ def saudacao():
     print('Seja bem-vindo!')
 
 
+# saudacao()
+
 # Teste 1
 
-teste = seja_educado(saudacao)
+# teste = seja_educado(saudacao)
 
-teste()
+# teste()
+
+
+# Teste 2
+
+def raiva():
+    print('ODEIO-TE!')
+
+
+raiva_educada = seja_educado(raiva)
+
+raiva_educada()
+
+
+"""
+
+
+# Decorators com Syntax Sugar
+
+def seja_educado_mesmo(funcao):
+    def sendo_mesmo():
+        print('Foi um gosto...')
+        funcao()
+        print('Tenha um excelente dia!')
+
+    return sendo_mesmo
+
+
+@seja_educado_mesmo
+def apresentando():
+    print('Meu nome é Paulo!')
+
+
+# Teste
+
+apresentando()
