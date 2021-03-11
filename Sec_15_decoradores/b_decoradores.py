@@ -82,8 +82,6 @@ def dormir():
 
 dormir()
 
-
-
 """
 
-
+# OBS: Não confundir Decorator com Decorator Function
