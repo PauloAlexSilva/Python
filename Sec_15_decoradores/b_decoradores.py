@@ -54,9 +54,6 @@ raiva_educada = seja_educado(raiva)
 raiva_educada()
 
 
-"""
-
-
 # Decorators com Syntax Sugar
 
 def seja_educado_mesmo(funcao):
@@ -76,3 +73,17 @@ def apresentando():
 # Teste
 
 apresentando()
+
+
+@seja_educado_mesmo
+def dormir():
+    print('Quero dormir...')
+
+
+dormir()
+
+
+
+"""
+
+
