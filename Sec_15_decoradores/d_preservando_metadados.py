@@ -58,3 +58,5 @@ print(soma(10, 30))
 
 print(soma.__name__)  # soma
 print(soma.__doc__)  # Soma dois números
+
+print(help(soma))
