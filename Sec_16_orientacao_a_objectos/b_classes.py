@@ -41,6 +41,14 @@ class ContaCorrente:
     pass
 
 
+class Produto:
+    pass
+
+
+class User:
+    pass
+
+
 lamp = Lampada
 
 print(type(Lampada))
