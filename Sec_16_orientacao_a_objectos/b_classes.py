@@ -29,6 +29,8 @@ todas juntas.
 Dica: EM computação não utilizamos: Acentuação, caracteres especiais, espaços ou similares
 para nomes de classes, atributos, métodos, arquivos, diretórios etc.
 
+OBS: Quando estamos a consctruir um software  e definimos quais são as classes teremos que ter no
+sistema, chamamos estes objetos que serão mapeados para classes de entidades.
 
 """
 
