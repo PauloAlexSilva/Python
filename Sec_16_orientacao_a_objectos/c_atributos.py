@@ -88,6 +88,12 @@ class Acesso:
         self.email = email
         self.__senha = senha
 
+    def mostra_senha(self):
+        print(self.__senha)
+
+    def mostra_email(self):
+        print(self.email)
+
 
 # OBS: Lembre-se que isso é apenas uma convenção, ou seja, a Linguagem Python não
 # vai impedir que façamos acesso aos atributos sinalizados como privados fora da classe.
@@ -97,4 +103,10 @@ class Acesso:
 user = Acesso('user@gmail.com', '123456')
 
 print(user.email)
-print(user.__senha)
+
+# print(user.__senha)  # AtributeError
+
+print(user._Acesso__senha)  # Temos acesso, mas não deveriamos fazer este acesso. (Name Mangling)
+
+user.mostra_senha()
+user.mostra_email()
