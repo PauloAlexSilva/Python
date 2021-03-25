@@ -32,8 +32,20 @@ public class Lampada(){
 
 }
 
+Em Python por convenção, ficou estabelecido que, todo atributo de uma classe é público.
+OU seja, pode ser acessado em todo o projeto.
+Caso queiramos demostrar que determinado atributo deve ser tratado como privado, ou seja,
+que deva ser acessado/utilizado somente dentro da própria classe onde está declarado,
+utiliza-se __ "duplo underscore" no ínicio do seu nome.
+
+Isso é conhecido também como Name Mangling.
+
+
+
 """
 
+
+# Classes com Atríbuto de Instância PUblico
 
 class Lampada:
     # Método construtor
@@ -67,4 +79,22 @@ class Utilizador:
         self.email = email
         self.senha = senha
 
+
 # Atributos Públicos e Atributos Privados
+
+class Acesso:
+
+    def __init__(self, email, senha):
+        self.email = email
+        self.__senha = senha
+
+
+# OBS: Lembre-se que isso é apenas uma convenção, ou seja, a Linguagem Python não
+# vai impedir que façamos acesso aos atributos sinalizados como privados fora da classe.
+
+# Exemplo
+
+user = Acesso('user@gmail.com', '123456')
+
+print(user.email)
+print(user.__senha)
