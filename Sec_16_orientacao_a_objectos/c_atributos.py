@@ -121,5 +121,27 @@ class Acesso:
         print(self.email)
 
 
+# Atributos de Classe
+
+# p1 = Produto('PlayStation', 'Jogos', 500)
+# p2 = Produto('XBox', 'Jogos', 400)
+
+""" 
+Atributos de classe, são atributos que são declarados diretamente na classe, ou seja,
+fora do construtor. Geralmente é inicializado com um valor, e este valor é partilhado
+entre todas as instâncias das classes. Ou seja, ao invés de cada instância da classe
+ter seus próprios valores como é o caso dos atributos de instância, com os atributos 
+de classe todas as instâncias terão o mesmo valor para este atributo.
+"""
 
 
+# Reformular a Classe Produto
+
+class Produto2:
+
+    imposto = 1.05
+
+    def __init__(self, nome, descricao, valor):
+        self.nome = nome
+        self.descricao = descricao
+        self.valor = valor
