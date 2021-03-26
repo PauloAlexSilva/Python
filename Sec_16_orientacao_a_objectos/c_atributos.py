@@ -41,6 +41,32 @@ utiliza-se __ "duplo underscore" no ínicio do seu nome.
 Isso é conhecido também como Name Mangling.
 
 
+# OBS: Lembre-se que isso é apenas uma convenção, ou seja, a Linguagem Python não
+# vai impedir que façamos acesso aos atributos sinalizados como privados fora da classe.
+
+# Exemplo
+
+user = Acesso('user@gmail.com', '123456')
+
+print(user.email)
+
+# print(user.__senha)  # AtributeError
+
+print(user._Acesso__senha)  # Temos acesso, mas não deveriamos fazer este acesso. (Name Mangling)
+
+user.mostra_senha()
+user.mostra_email()
+
+
+# Atributos de Instância -> Aos  criarmos instâncias de uma classe, todas as instâncias
+# terão estes atributos.
+
+user1 = Acesso('user1@gamil.com', '123456')
+user2 = Acesso('user2@gmail.com', '123456')
+
+user1.mostra_email()
+user2.mostra_email()
+
 
 """
 
@@ -95,18 +121,5 @@ class Acesso:
         print(self.email)
 
 
-# OBS: Lembre-se que isso é apenas uma convenção, ou seja, a Linguagem Python não
-# vai impedir que façamos acesso aos atributos sinalizados como privados fora da classe.
 
-# Exemplo
 
-user = Acesso('user@gmail.com', '123456')
-
-print(user.email)
-
-# print(user.__senha)  # AtributeError
-
-print(user._Acesso__senha)  # Temos acesso, mas não deveriamos fazer este acesso. (Name Mangling)
-
-user.mostra_senha()
-user.mostra_email()
