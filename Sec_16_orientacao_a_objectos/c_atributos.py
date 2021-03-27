@@ -138,10 +138,12 @@ de classe todas as instâncias terão o mesmo valor para este atributo.
 # Reformular a Classe Produto
 
 class Produto2:
-
+    # Atributo de classe
     imposto = 1.05
 
     def __init__(self, nome, descricao, valor):
         self.nome = nome
         self.descricao = descricao
-        self.valor = valor
+        self.valor = (valor * Produto2.imposto)
+
+
