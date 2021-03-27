@@ -147,3 +147,11 @@ class Produto2:
         self.valor = (valor * Produto2.imposto)
 
 
+p1 = Produto2('PlayStation', 'Jogos', 500)
+p2 = Produto2('Xbox', 'Jogos', 300)
+
+print(p1.imposto)
+print(p2.imposto)
+
+print(p1.valor)
+print(p2.valor)
