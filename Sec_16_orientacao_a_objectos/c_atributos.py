@@ -68,6 +68,33 @@ user1.mostra_email()
 user2.mostra_email()
 
 
+
+Atributos de classe, são atributos que são declarados diretamente na classe, ou seja,
+fora do construtor. Geralmente é inicializado com um valor, e este valor é partilhado
+entre todas as instâncias das classes. Ou seja, ao invés de cada instância da classe
+ter seus próprios valores como é o caso dos atributos de instância, com os atributos
+de classe todas as instâncias terão o mesmo valor para este atributo.
+
+
+p1 = Produto2('PlayStation', 'Jogos', 500)
+p2 = Produto2('Xbox', 'Jogos', 300)
+
+print(p1.imposto)
+print(p2.imposto)
+
+print(p1.valor)  # Acessp possível, mas incorreto de um atributo de classe
+print(p2.valor)  # Acessp possível, mas incorreto de um atributo de classe
+
+# OBS: Não precisamos criar uma instância de uma classe para fazer acesso a um atributo de classe
+
+print(Produto2.imposto)  # Acesso correto de um atributo de classe
+
+print(p1.id)
+print(p2.id)
+
+# OBS: Em linguagens como o Java, os atributos conhecidos como atributos de classe em Python
+# são chamados de atributos estáticos;
+
 """
 
 
@@ -126,14 +153,6 @@ class Acesso:
 # p1 = Produto('PlayStation', 'Jogos', 500)
 # p2 = Produto('XBox', 'Jogos', 400)
 
-""" 
-Atributos de classe, são atributos que são declarados diretamente na classe, ou seja,
-fora do construtor. Geralmente é inicializado com um valor, e este valor é partilhado
-entre todas as instâncias das classes. Ou seja, ao invés de cada instância da classe
-ter seus próprios valores como é o caso dos atributos de instância, com os atributos 
-de classe todas as instâncias terão o mesmo valor para este atributo.
-"""
-
 
 # Reformular a Classe Produto
 
@@ -150,18 +169,5 @@ class Produto2:
         Produto2.contador = self.id
 
 
-p1 = Produto2('PlayStation', 'Jogos', 500)
-p2 = Produto2('Xbox', 'Jogos', 300)
+# Atributos Dinâmicos
 
-print(p1.imposto)
-print(p2.imposto)
-
-print(p1.valor)  # Acessp possível, mas incorreto de um atributo de classe
-print(p2.valor)  # Acessp possível, mas incorreto de um atributo de classe
-
-# OBS: Não precisamos criar uma instância de uma classe para fazer acesso a um atributo de classe
-
-print(Produto2.imposto)  # Acesso correto de um atributo de classe
-
-print(p1.id)
-print(p2.id)
