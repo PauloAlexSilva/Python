@@ -140,11 +140,14 @@ de classe todas as instâncias terão o mesmo valor para este atributo.
 class Produto2:
     # Atributo de classe
     imposto = 1.05
+    contador = 0
 
     def __init__(self, nome, descricao, valor):
+        self.id = Produto2.contador + 1
         self.nome = nome
         self.descricao = descricao
         self.valor = (valor * Produto2.imposto)
+        Produto2.contador = self.id
 
 
 p1 = Produto2('PlayStation', 'Jogos', 500)
@@ -153,5 +156,12 @@ p2 = Produto2('Xbox', 'Jogos', 300)
 print(p1.imposto)
 print(p2.imposto)
 
-print(p1.valor)
-print(p2.valor)
+print(p1.valor)  # Acessp possível, mas incorreto de um atributo de classe
+print(p2.valor)  # Acessp possível, mas incorreto de um atributo de classe
+
+# OBS: Não precisamos criar uma instância de uma classe para fazer acesso a um atributo de classe
+
+print(Produto2.imposto)  # Acesso correto de um atributo de classe
+
+print(p1.id)
+print(p2.id)
