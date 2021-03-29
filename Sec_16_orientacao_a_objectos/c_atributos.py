@@ -68,6 +68,8 @@ user1.mostra_email()
 user2.mostra_email()
 
 
+# Atributos de Classe
+
 
 Atributos de classe, são atributos que são declarados diretamente na classe, ou seja,
 fora do construtor. Geralmente é inicializado com um valor, e este valor é partilhado
@@ -169,5 +171,13 @@ class Produto2:
         Produto2.contador = self.id
 
 
-# Atributos Dinâmicos
+# Atributos Dinâmicos -> Um atributo de instância que pode ser criado em tempo de execução
 
+# OBS: O atributo dinâminco será exclusivo da instância que o criou.
+
+p1 = Produto2('PlayStation', 'Jogos', 500)
+p2 = Produto2('Arroz', 'Mercearia', 5.99)
+
+# Criando um atributo dinâmico em tempo de execução
+
+p2.peso = '1kg'  # Na classe Produto2 não existe o atributo peso
