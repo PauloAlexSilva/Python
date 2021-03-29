@@ -181,3 +181,23 @@ p2 = Produto2('Arroz', 'Mercearia', 5.99)
 # Criando um atributo dinâmico em tempo de execução
 
 p2.peso = '1kg'  # Na classe Produto2 não existe o atributo peso
+
+print(f'Produto: {p2.nome}, Descrição: {p2.descricao}, Valor: {p2.valor}, Peso: {p2.peso}')
+
+# print(f'Produto: {p1.nome}, Descrição: {p1.descricao}, Valor: {p1.valor}, Peso: {p1.peso}')
+
+
+# Apagar Atributos
+
+print(p1.__dict__)  # __dict__ -> propriedade dos objectos
+print(p2.__dict__)
+
+# print(Produto2.__dict__)
+
+del p2.peso
+del p2.valor
+del p2.descricao
+del p2.nome
+
+print(p1.__dict__)  # __dict__ -> propriedade dos objectos
+print(p2.__dict__)
