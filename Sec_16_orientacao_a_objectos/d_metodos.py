@@ -9,12 +9,24 @@ e Métodos de Classe.
 
 # Métodos de Instância
 
+# O método dunder init __init__ é um método especial chamado de construtor. A sua função
+é construir o objeto a partir da classe.
+
+OBS: Todo o elemento em Python que inicia e finaliza com duplo underline é chamado de dunder
+(Double Underline)
+
+OBS: Os métodos/funções dunder em Python são chamados de métodos mágicos.
+
+ATENÇÃO: Não usar dunder (underline no início e no fim) para criar as nossas funções. Pois,
+são funções do Python internas.
+
+
 """
 
 
 class Lampada:
 
-    def __index__(self, cor, voltagem, luminosidade):
+    def __init__(self, cor, voltagem, luminosidade):  # Método construtor
         self.__cor = cor
         self.__voltagem = voltagem
         self.__luminosidade = luminosidade
@@ -22,8 +34,7 @@ class Lampada:
 
 
 class ContaCorrente:
-
-    contador = 1234
+    contador = 4999
 
     def __init__(self, limite, saldo):
         self.__numero = ContaCorrente.contador + 1
@@ -33,11 +44,18 @@ class ContaCorrente:
 
 
 class Produto:
+    contador = 0
 
     def __init__(self, nome, descricao, valor):
+        self.__id = Produto.contador + 1
         self.__nome = nome
         self.__descricao = descricao
         self.__valor = valor
+        Produto.contador = self.__id
+
+    def desconto(self, percentagem):
+        """Devolve o valor do produto com o desconto"""
+        return (self.__valor * (100 - percentagem)) / 100
 
 
 class Utilizador:
@@ -46,3 +64,11 @@ class Utilizador:
         self.__nome = nome
         self.__email = email
         self.__senha = senha
+
+    def __correr__(self, metros):
+        print(f'{self.__nome} correu {metros} metros')
+
+
+p1 = Produto('PlayStation', 'Jogos', 500)
+
+print(p1.desconto(50))
