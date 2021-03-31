@@ -20,6 +20,9 @@ OBS: Os métodos/funções dunder em Python são chamados de métodos mágicos.
 ATENÇÃO: Não usar dunder (underline no início e no fim) para criar as nossas funções. Pois,
 são funções do Python internas.
 
+# Métodos são escritos em letras minusculas. Se o nome for composto, o nome terá as palavras
+separadas por underline.
+
 
 """
 
@@ -60,13 +63,14 @@ class Produto:
 
 class Utilizador:
 
-    def __init__(self, nome, email, senha):
+    def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
+        self.__sobrenome = sobrenome
         self.__email = email
         self.__senha = senha
 
-    def __correr__(self, metros):
-        print(f'{self.__nome} correu {metros} metros')
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
 
 
 p1 = Produto('PlayStation', 'Jogos', 500)
