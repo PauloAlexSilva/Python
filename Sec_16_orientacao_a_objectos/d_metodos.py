@@ -24,6 +24,9 @@ são funções do Python internas.
 separadas por underline.
 
 
+p1 = Produto('PlayStation', 'Jogos', 500)
+
+print(p1.desconto(50))
 """
 
 
@@ -73,6 +76,9 @@ class Utilizador:
         return f'{self.__nome} {self.__sobrenome}'
 
 
-p1 = Produto('PlayStation', 'Jogos', 500)
+user1 = Utilizador('Paulo', 'Silva', 'teste@gmail.com', '1234')
+user2 = Utilizador('Ana', 'Nunes', 'teste2@gmail.com', '4321')
 
-print(p1.desconto(50))
+print(user1.nome_completo())
+print(user2.nome_completo())
+
