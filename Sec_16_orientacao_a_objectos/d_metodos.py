@@ -64,6 +64,15 @@ else:
 print(f'A senha do utilizador Criptografada: {user._Utilizador__senha}')  # Acesso errado
 
 
+# Métodos de Classe em Python são conhecidos como Métodos estáticos em outras linguagens
+
+# Métodos de Classe
+
+user = Utilizador('Paulo', 'Silva', 'paulo@gmail.com', '123456')
+
+Utilizador.conta_user()  # Forma correta
+user.conta_user()  # Possível, mas incorreta.
+
 
 """
 
@@ -106,12 +115,15 @@ from passlib.hash import pbkdf2_sha256 as cryp
 
 
 class Utilizador:
-
     contador = 0
 
-    @classmethod
+    @classmethod  # Método de Classe
     def conta_user(cls):
         print(f'Temos {cls.contador} utilizadore(s) no sistema.')
+
+    @staticmethod  # Método Estático
+    def definicao():
+        return 'UXR344'
 
     def __init__(self, nome, sobrenome, email, senha):
         self.__id = Utilizador.contador + 1
@@ -120,6 +132,7 @@ class Utilizador:
         self.__email = email
         self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
         Utilizador.contador = self.__id
+        print(f'Utilizador criado: {self.__gera_utilizador()}')
 
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
@@ -129,10 +142,18 @@ class Utilizador:
             return True
         return False
 
+    def __gera_utilizador(self):
+        return self.__email.split('@')[0]
 
-# Métodos de Classe
 
-user = Utilizador('Paulo', 'Silva', 'paulo@gmail.com', '123456')
+# user = Utilizador('Paulo', 'Silva', 'farrafao@gmail.com', '123456')
 
-Utilizador.conta_user()  # Forma correta
-user.conta_user()  # Possível, mas incorreta.
+# Método EStático
+
+print(Utilizador.contador)
+print(Utilizador.definicao())
+
+user = Utilizador('Paulo', 'Silva', 'farrafao@gmail.com', '123456')
+
+print(user.contador)
+print(user.definicao())
