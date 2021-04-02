@@ -39,6 +39,32 @@ print(f'Password User 1: {user1._Utilizador__senha}')  # Acesso de forma errada 
 print(f'Password User 2: {user2._Utilizador__senha}')
 
 
+
+nome = input('Introduza o Nome: ')
+sobrenome = input('Introduza o Sobrenome: ')
+email = input('Introduza o email: ')
+senha = input('Introduza a Password: ')
+confirma_senha = input('Confirme a Password: ')
+
+if senha == confirma_senha:
+    user = Utilizador(nome, sobrenome, email, senha)
+else:
+    print('Password Errada!')
+    exit(1)
+
+print('Utilizador criado com sucesso')
+
+senha = input('Introduza a password para acesso: ')
+
+if user.checa_senha(senha):
+    print('Acesso Permitido!')
+else:
+    print('Acesso Negado!')
+
+print(f'A senha do utilizador Criptografada: {user._Utilizador__senha}')  # Acesso errado
+
+
+
 """
 
 
@@ -81,11 +107,19 @@ from passlib.hash import pbkdf2_sha256 as cryp
 
 class Utilizador:
 
+    contador = 0
+
+    @classmethod
+    def conta_user(cls):
+        print(f'Temos {cls.contador} utilizadore(s) no sistema.')
+
     def __init__(self, nome, sobrenome, email, senha):
+        self.__id = Utilizador.contador + 1
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__email = email
         self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
+        Utilizador.contador = self.__id
 
     def nome_completo(self):
         return f'{self.__nome} {self.__sobrenome}'
@@ -96,26 +130,9 @@ class Utilizador:
         return False
 
 
-nome = input('Introduza o Nome: ')
-sobrenome = input('Introduza o Sobrenome: ')
-email = input('Introduza o email: ')
-senha = input('Introduza a Password: ')
-confirma_senha = input('Confirme a Password: ')
+# Métodos de Classe
 
-if senha == confirma_senha:
-    user = Utilizador(nome, sobrenome, email, senha)
-else:
-    print('Password Errada!')
-    exit(1)
+user = Utilizador('Paulo', 'Silva', 'paulo@gmail.com', '123456')
 
-print('Utilizador criado com sucesso')
-
-senha = input('Introduza a password para acesso: ')
-
-if user.checa_senha(senha):
-    print('Acesso Permitido!')
-else:
-    print('Acesso Negado!')
-
-print(f'A senha do utilizador Criptografada: {user._Utilizador__senha}')  # Acesso errado
-
+Utilizador.conta_user()  # Forma correta
+user.conta_user()  # Possível, mas incorreta.
