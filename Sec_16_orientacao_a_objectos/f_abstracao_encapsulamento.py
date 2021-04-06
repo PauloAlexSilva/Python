@@ -31,3 +31,16 @@ e métodos privados do utilizador.
 
 """
 
+
+class Conta:
+    contador = 400
+
+    def __init__(self, titular, saldo, limite):
+        self.numero = Conta.contador
+        self.titular = titular
+        self.saldo = saldo
+        self.limite = limite
+        Conta.contador += 1
+
+    def extrato(self):
+        print(f'Saldo de {self.saldo} do titular {self.titular} com limite de {self.limite}')
