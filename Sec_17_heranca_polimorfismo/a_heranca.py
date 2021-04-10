@@ -57,28 +57,27 @@ print(func1.nome_completo())
 """
 
 
-class Cliente:
+class Pessoa:
 
-    def __init__(self, nome, sobrenome, nif, renda):
+    def __init__(self, nome, sobrenome, nif):
         self.__nome = nome
         self.__sobrenome = sobrenome
         self.__nif = nif
+
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+
+
+class Cliente(Pessoa):
+
+    def __init__(self, renda):
         self.__renda = renda
 
-    def nome_completo(self):
-        return f'{self.__nome} {self.__sobrenome}'
 
+class Funcionario(Pessoa):
 
-class Funcionario:
-
-    def __init__(self, nome, sobrenome, nif, matricula):
-        self.__nome = nome
-        self.__sobrenome = sobrenome
-        self.__nif = nif
+    def __init__(self, matricula):
         self.__matricula = matricula
-
-    def nome_completo(self):
-        return f'{self.__nome} {self.__sobrenome}'
 
 
 cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
