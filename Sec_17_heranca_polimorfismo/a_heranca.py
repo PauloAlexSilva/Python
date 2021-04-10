@@ -54,6 +54,25 @@ print(cliente1.nome_completo())
 print(func1.nome_completo())
 
 
+OBS: Quando uma classe herda de outra classe ela herda todos os atributos e métodos da
+classe herdada.
+
+
+Quando uma classe herda de outra classe, a classe herdada é conhecida por:
+    (Pessoa)
+    - Super Classe;
+    - Classe Mãe;
+    - Classe Pai;
+    - Classe Base;
+    - Classe Genérica.
+
+Qunado uma classe herda de outra classe, ela é chamada:
+    (Cliente, Funcionário)
+    - Sub Classe;
+    - Classe Filha;
+    - Classe Específica.
+
+
 """
 
 
@@ -69,14 +88,18 @@ class Pessoa:
 
 
 class Cliente(Pessoa):
+    """Cliente herda de Pessoa"""
 
-    def __init__(self, renda):
+    def __init__(self, nome, sobrenome, nif, renda):
+        super().__init__(nome, sobrenome, nif)
         self.__renda = renda
 
 
 class Funcionario(Pessoa):
+    """Funcionario herda de Pessoa"""
 
-    def __init__(self, matricula):
+    def __init__(self, nome, sobrenome, nif, matricula):
+        super().__init__(nome, sobrenome, nif)
         self.__matricula = matricula
 
 
