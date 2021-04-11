@@ -108,3 +108,17 @@ func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
 
 print(cliente1.nome_completo())
 print(func1.nome_completo())
+
+class Funcionario(Pessoa):
+    """Funcionario herda de Pessoa"""
+
+    def __init__(self, nome, sobrenome, nif, matricula):
+        super().__init__(nome, sobrenome, nif)
+        self.__matricula = matricula
+
+
+cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
+func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
+
+print(cliente1.nome_completo())
+print(func1.nome_completo())
