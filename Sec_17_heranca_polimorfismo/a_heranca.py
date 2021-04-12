@@ -73,6 +73,42 @@ Qunado uma classe herda de outra classe, ela é chamada:
     - Classe Específica.
 
 
+class Pessoa:
+
+    def __init__(self, nome, sobrenome, nif):
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__nif = nif
+
+    def nome_completo(self):
+        return f'{self.__nome} {self.__sobrenome}'
+
+
+class Cliente(Pessoa):
+    # Cliente herda de Pessoa
+
+    def __init__(self, nome, sobrenome, nif, renda):
+        super().__init__(nome, sobrenome, nif)
+        self.__renda = renda
+
+
+class Funcionario(Pessoa):
+    # Funcionario herda de Pessoa
+
+    def __init__(self, nome, sobrenome, nif, matricula):
+        super().__init__(nome, sobrenome, nif)  # Forma comum de aceder dados da super classe
+        # Pessoa.__init__(self, nome, sobrenome, nif) Forma não comum de aceder dados da super classe
+        self.__matricula = matricula
+
+
+cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
+func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
+
+print(cliente1.nome_completo())
+print(func1.nome_completo())
+
+print(func1.__dict__)
+
 """
 
 
@@ -99,26 +135,12 @@ class Funcionario(Pessoa):
     """Funcionario herda de Pessoa"""
 
     def __init__(self, nome, sobrenome, nif, matricula):
-        super().__init__(nome, sobrenome, nif)
+        super().__init__(nome, sobrenome, nif)  # Forma comum de aceder dados da super classe
+        # Pessoa.__init__(self, nome, sobrenome, nif) Forma não comum de aceder dados da super classe
         self.__matricula = matricula
 
 
-cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
-func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
-
-print(cliente1.nome_completo())
-print(func1.nome_completo())
-
-class Funcionario(Pessoa):
-    """Funcionario herda de Pessoa"""
-
-    def __init__(self, nome, sobrenome, nif, matricula):
-        super().__init__(nome, sobrenome, nif)
-        self.__matricula = matricula
-
+# Sobrescrita de Métodos - (Overriding)
 
 cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
 func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
-
-print(cliente1.nome_completo())
-print(func1.nome_completo())
