@@ -109,6 +109,12 @@ print(func1.nome_completo())
 
 print(func1.__dict__)
 
+# Sobrescrita de Métodos - (Overriding)
+
+Ocorre quando Reinscrevemos/reimplementamos um método presente na super classe
+ou em classes filhas.
+
+
 """
 
 
@@ -139,13 +145,16 @@ class Funcionario(Pessoa):
         # Pessoa.__init__(self, nome, sobrenome, nif) Forma não comum de aceder dados da super classe
         self.__matricula = matricula
 
+    def nome_completo(self):
+        print(super().nome_completo())
+        print(self._Pessoa__nif)
+        return f'Funcionário: {self.__matricula} Nome: {self._Pessoa__nome}'
+
 
 # Sobrescrita de Métodos - (Overriding)
 
 cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
 func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
 
-cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
-func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
-cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
-func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
+print(cliente1.nome_completo())
+print(func1.nome_completo())
