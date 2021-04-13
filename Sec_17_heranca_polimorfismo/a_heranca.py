@@ -147,3 +147,5 @@ func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
 
 cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
 func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
+cliente1 = Cliente('Paulo', 'Silva', '123456', 5000)
+func1 = Funcionario('Carlos', 'Nunes', '54321', 1234)
