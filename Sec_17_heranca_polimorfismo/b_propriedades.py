@@ -1,6 +1,12 @@
 """
  POO - Propriedades
 
+Em linguagens de programação como o Java, ao declaramos atributos privados nas classes,
+costumanos criar métodos públicos para manipulação desses atributos.
+Esses métodos são conhecidos por getters e setters, onde os getters devolvem o valor do
+atributo e os setters alteram o valor do mesmo.
+
+
 """
 
 
@@ -27,19 +33,23 @@ class Conta:
         self.__saldo -= valor
         destino.__saldo += valor
 
-    def get_numero(self):
-        return self.__numero
-
-    def
+    def set_numero(self, numero):
+        self.__numero = numero
 
     def get_titular(self):
         return self.__titular
+
+    def set_titular(self, titular):
+        self.__titular = titular
 
     def get_saldo(self):
         return self.__saldo
 
     def get_limite(self):
         return self.__limite
+
+    def set_limite(self, limite):
+        self.__limite = limite
 
 
 conta1 = Conta('Paulo', 3000, 5000)
