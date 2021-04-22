@@ -64,3 +64,16 @@ print(f'A soma do saldo das contas é {soma}')
 print(conta1.__dict__)
 conta1.set_limite(999999)
 print(conta1.__dict__)
+
+conta1 = Conta('Paulo', 3000, 5000)
+conta2 = Conta('Ana', 2000, 4000)
+
+print(conta1.extrato())
+print(conta2.extrato())
+
+soma = conta1.get_saldo() + conta2.get_saldo()
+print(f'A soma do saldo das contas é {soma}')
+
+print(conta1.__dict__)
+conta1.set_limite(999999)
+print(conta1.__dict__)
